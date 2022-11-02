@@ -11,17 +11,17 @@ def graficar(p1x, p1y, p2x, p2y):
     dy = p2y - p1y
     
     if dx >= dy:
-        supLimit = abs(dx)
+        steps = abs(dx)
     else:
-        supLimit = abs(dy)
+        steps = abs(dy)
 
     x = p1x
     y = p1y
     point(x,y)
-    dx = (dx / supLimit)
-    dy = (dy / supLimit)
+    dx = (dx / steps)
+    dy = (dy / steps)
     
-    for i in range(supLimit):
+    for i in range(steps):
         x += dx
         y += dy
         point(x,y)
